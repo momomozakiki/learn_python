@@ -8,5 +8,7 @@ def lottery():
     # returns a 7th number between 1 and 15
     yield rad.randint(1, 15)
 
+x = 1
 for random_number in lottery():
-    print("And the next number is... %d!" % (random_number))
+    print("And the number %d is... %d!" % (x, random_number))
+    x+= 1

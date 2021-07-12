@@ -13,6 +13,8 @@ Change — Reset
 Enter — Exit
 Start — Stop
 """
+# https://www.geeksforgeeks.org/with-statement-in-python/
+
 from contextlib import contextmanager
 
 
@@ -28,8 +30,16 @@ def open_file(filename):
         opened_file.close()
 
 
-with open_file('readme.txt') as managed_file: # Assign open_file('readme.txt') to managed_file
+with open_file('readme.txt') as managed_file:  # Assign open_file('readme.txt') to managed_file
     # print(type(managed_file))
     print("Before read text: ")
     text = managed_file.read()
     print(text)
+    print("After print text")
+
+with open_file('readme.txt') as managed_file2:  # Assign open_file('readme.txt') to managed_file
+    # print(type(managed_file))
+    print("Before read text: ")
+    text = managed_file2.read()
+    print(text)
+    print("After print text")
